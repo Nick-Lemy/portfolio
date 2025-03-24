@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Karla"
+  --font-sans: "Karla";
+  --color-secondary: #7961AF
 }
