@@ -36,7 +36,10 @@ export const Navbar = () => {
                         <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
                     </svg>
                 </a>
-                <a className={menu + ` flex lg:hidden *:fill-secondary transition duration-300 ease-in-out`} href="">
+                <a onClick={(e) => {
+                    e.preventDefault();
+                    menuToggle();
+                }} className={menu + ` flex lg:hidden *:fill-secondary transition duration-300 ease-in-out`} href="">
                     <svg className="" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#ffffff"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
                     </svg>
                 </a>
