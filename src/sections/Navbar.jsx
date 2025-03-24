@@ -1,11 +1,9 @@
+import { Logo } from "../components/Logo"
 export const Navbar = () => {
     return (
         <nav className="bg-black">
             <div className="px-30 justify-between py-4.75 flex gap-40 items-center">
-                <h1 className="text-white text-4xl font-bold">
-                    Lemy
-                    <span className="text-secondary">.dev</span>
-                </h1>
+                <Logo />
                 <ul className="flex text-lg *:hover:text-secondary text-white font-medium gap-25">
                     <li className="transition duration-300 ease-in-out"><a href="/">Home</a></li>
                     <li className="transition duration-300 ease-in-out"><a href="#project">Project</a></li>
