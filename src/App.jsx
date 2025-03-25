@@ -1,6 +1,7 @@
 import './App.css'
 import { Navbar } from './sections/Navbar'
 import { CenterContainer } from './sections/CenterContainer' 
+import { Experience } from './sections/Experience'
 
 function App() {
 
@@ -8,6 +9,7 @@ function App() {
     <>
     <Navbar />
     <CenterContainer />
+    <Experience/>
     </>
   )
 }
