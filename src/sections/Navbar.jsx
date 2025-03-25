@@ -13,7 +13,7 @@ export const Navbar = () => {
         }
     }
     return (
-        <nav className="bg-black relative">
+        <nav className="bg-black sticky top-0">
             <div className="px-8 lg:px-30 justify-between py-3 lg:py-4.75 flex gap-40 items-center">
                 <a href="/">
                     <Logo />
