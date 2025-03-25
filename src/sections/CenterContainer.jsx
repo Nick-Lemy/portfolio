@@ -1,7 +1,8 @@
+import { PrimaryButton } from "../components/PrimaryButton"
 export const CenterContainer = () => {
     return (
         <div className="px-8 lg:px-30 h-screen justify-center flex flex-col items-center">
-            <div>
+            <div className="flex flex-col gap-3">
                 <div className="flex self-start items-center  gap-5">
                     <img className="w-15" src="/me.png" alt="" />
                     <h1 className=" text-white text-2xl font-semibold">Hey, I'm <span className="text-secondary">Nick-Lemy</span> <br /> A <span className="text-secondary">Junior Software Engineer</span>  </h1>
@@ -10,7 +11,9 @@ export const CenterContainer = () => {
                     A Junior Fullstack Developer with solid foundations in Express JS.
                     passionate about crafting seamless user experiences, I thrive at the intersection of creativity and functionality.
                 </p>
-                <div>
+                <div className="flex gap-5">
+                    <PrimaryButton src="/at.svg" title="Contact me" />
+                    <PrimaryButton src="/code.svg" title="Projects" />
                 </div>
             </div>
         </div>
