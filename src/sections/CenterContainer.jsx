@@ -13,14 +13,16 @@ export const CenterContainer = () => {
                     A Junior Fullstack Developer with solid foundations in Express JS.
                     passionate about crafting seamless user experiences, I thrive at the intersection of creativity and functionality.
                 </p>
-                <div className="flex gap-5 items-center">
-                    <PrimaryButton src="/at.svg" title="Contact me" />
-                    <PrimaryButton src="/code.svg" title="Projects" />
-                    <p className="text-white text-2xl font-bold">|</p>
+                <div className="flex flex-col-reverse gap-5">
+                    <div className="flex gap-5">
+                        <PrimaryButton src="/at.svg" title="Contact me" />
+                        <PrimaryButton src="/code.svg" title="Projects" />
+                        <p className="hidden text-white text-2xl font-bold">|</p>
+                    </div>
                     <div className="flex gap-5">
                         <SocialMedia className='w-9' src="/github.svg" href="https://github.com/Nick-Lemy" />
                         <SocialMedia className="w-6 items-center flex" src="/linkedin.svg" href="https://github.com/Nick-Lemy" />
-                        <SocialMedia className='w-8 items-center flex'  src="/discord.svg" href="https://github.com/Nick-Lemy" />
+                        <SocialMedia className='w-8 items-center flex' src="/discord.svg" href="https://github.com/Nick-Lemy" />
                         <SocialMedia className="w-9 items-center flex" src="/codewars.svg" href="https://github.com/Nick-Lemy" />
                     </div>
                 </div>
