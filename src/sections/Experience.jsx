@@ -14,8 +14,6 @@ export const Experience = () => {
                 <div className="flex flex-col lg:flex-row gap-7">
                     <InfoSquare icon="/computer.svg" title={`What can I do`} desc={`I can help develop solutions that will help grow your business:`} list={[`UI/UX Design`, `Frontend Development`, `Backend Development`, `Mobile App Development`]} />
                     <InfoSquare icon="/tools.svg" title={`Tools I use`} desc={`These are the different tools I use to build valuable products:`} list={[`Figma`, `Javascript, React, TailwindCss`, `Express.js, MySQL, Postgresql, MongoDB`, `Dart, Flutter, Firebase`]} />
-                    <InfoSquare icon="/computer.svg" title={`What can I do`} desc={`I can help develop solutions that will help grow your business:`} list={[`UI/UX Design`, `Frontend Development`, `Backend Development`, `Mobile App Development`]} />
-                    <InfoSquare icon="/tools.svg" title={`Tools I use`} desc={`These are the different tools I use to build valuable products:`} list={[`Figma`, `Javascript, React, TailwindCss`, `Express.js, MySQL, Postgresql, MongoDB`, `Dart, Flutter, Firebase`]} />
                 </div>
                 <div className="self-end py-5">
                     <PrimaryButton src={`/square.svg`} title={`View My Projects`} />
