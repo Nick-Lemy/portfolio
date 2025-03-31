@@ -10,8 +10,8 @@ export const CenterContainer = () => {
                     <h1 className=" text-white text-2xl lg:text-4xl font-semibold">Hey, I'm <span className="text-secondary">Nick-Lemy</span> <br /> A <span className="text-secondary">Junior Software Engineer</span>  </h1>
                 </div>
                 <p className="max-w-xl lg:text-xl text-white text-md ">
-                    A Junior Fullstack Developer with solid foundations in Express JS.
-                    passionate about crafting seamless user experiences, I thrive at the intersection of creativity and functionality.
+                    A Junior Software Engineer with solid foundations in Backend and Mobile App development.
+                    passionate about crafting seamless user experiences and Restfull APIs, I thrive at the intersection of creativity and functionality.
                 </p>
                 <div className="flex flex-col-reverse gap-5  lg:flex-row">
                     <div className="flex gap-5 ">

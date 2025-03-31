@@ -21,6 +21,7 @@ export const Navbar = () => {
                 </a>
                 <ul className="hidden lg:flex text-lg *:hover:text-secondary *:transition *:duration-300 *:ease-in-out text-white font-medium gap-25">
                     <li className=""><a href="/">Home</a></li>
+                    <li className=""><a href="#project">Stack</a></li>
                     <li className=""><a href="#project">Projects</a></li>
                     <li className=""><a href="#contact">Contact</a></li>
                 </ul>
@@ -55,6 +56,7 @@ export const Navbar = () => {
             <div id="menu-mobile" className={menu + ` bg-black absolute w-full pt-3 pb-7`}>
                 <ul className="flex flex-col justify-center w-full items-end px-8 text-lg *:hover:text-secondary *:transition *:duration-300 *:ease-in-out text-white font-medium gap-5">
                     <li className=""><a href="/">Home</a></li>
+                    <li className=""><a href="#project">Stack</a></li>
                     <li className=""><a href="#project">Projects</a></li>
                     <li className=""><a href="#contact">Contact</a></li>
                 </ul>
