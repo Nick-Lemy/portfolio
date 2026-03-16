@@ -1,6 +1,14 @@
 import { useState } from "react"
 import { Logo } from "../components/Logo"
 
+const navLinks = [
+    { label: "Home", href: "#home" },
+    { label: "Experience", href: "#experience" },
+    { label: "Projects", href: "#projects" },
+    { label: "Blog", href: "#blog" },
+    { label: "Contact", href: "#contact" },
+]
+
 export const Navbar = () => {
     const [menu, setMenu] = useState('hidden')
     const [menuButton, setMenuButton] = useState('flex')
@@ -14,21 +22,20 @@ export const Navbar = () => {
         }
     }
     return (
-        <nav className="bg-black sticky top-0">
-            <div className="px-8 lg:px-30 justify-between py-3 lg:py-4.75 flex gap-40 items-center">
+        <nav className="bg-black sticky top-0 z-50">
+            <div className="px-8 lg:px-30 justify-between py-3 lg:py-4.75 flex gap-10 items-center">
                 <a href="/">
                     <Logo />
                 </a>
-                <ul className="hidden lg:flex text-lg *:hover:text-secondary *:transition *:duration-300 *:ease-in-out text-white font-medium gap-25">
-                    <li className=""><a href="/">Home</a></li>
-                    <li className=""><a href="#project">Stack</a></li>
-                    <li className=""><a href="#project">Projects</a></li>
-                    <li className=""><a href="#contact">Contact</a></li>
+                <ul className="hidden lg:flex text-lg *:hover:text-secondary *:transition *:duration-300 *:ease-in-out text-white font-medium gap-10">
+                    {navLinks.map((link) => (
+                        <li key={link.href}><a href={link.href}>{link.label}</a></li>
+                    ))}
                 </ul>
-                <a className="hidden lg:flex hover:*:*:**:fill-secondary hover:border-secondary rounded-md px-1 transition duration-300 ease-in-out py-0.5" href="">
+                <a className="hidden lg:flex hover:*:*:**:fill-secondary hover:border-secondary rounded-md px-1 transition duration-300 ease-in-out py-0.5" href="https://github.com/Nick-Lemy" target="_blank" rel="noopener noreferrer">
                     <svg className="w-8 transition duration-300 ease-in-out" viewBox="0 -3.5 256 256" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" fill="#ffffff" stroke="#ffffff">
-                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+                        <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
                         <g id="SVGRepo_iconCarrier"> <g fill="#ffffff">
                             <path d="M127.505 0C57.095 0 0 57.085 0 127.505c0 56.336 36.534 104.13 87.196 120.99 6.372 1.18 8.712-2.766 8.712-6.134 0-3.04-.119-13.085-.173-23.739-35.473 7.713-42.958-15.044-42.958-15.044-5.8-14.738-14.157-18.656-14.157-18.656-11.568-7.914.872-7.752.872-7.752 12.804.9 19.546 13.14 19.546 13.14 11.372 19.493 29.828 13.857 37.104 10.6 1.144-8.242 4.449-13.866 8.095-17.05-28.32-3.225-58.092-14.158-58.092-63.014 0-13.92 4.981-25.295 13.138-34.224-1.324-3.212-5.688-16.18 1.235-33.743 0 0 10.707-3.427 35.073 13.07 10.17-2.826 21.078-4.242 31.914-4.29 10.836.048 21.752 1.464 31.942 4.29 24.337-16.497 35.029-13.07 35.029-13.07 6.94 17.563 2.574 30.531 1.25 33.743 8.175 8.929 13.122 20.303 13.122 34.224 0 48.972-29.828 59.756-58.22 62.912 4.573 3.957 8.648 11.717 8.648 23.612 0 17.06-.148 30.791-.148 34.991 0 3.393 2.295 7.369 8.759 6.117 50.634-16.879 87.122-64.656 87.122-120.973C255.009 57.085 197.922 0 127.505 0">
                             </path>
@@ -49,16 +56,15 @@ export const Navbar = () => {
                     e.preventDefault();
                     menuToggle();
                 }} className={menu + ` flex lg:hidden *:fill-secondary transition duration-300 ease-in-out`} href="">
-                    <svg className="" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#ffffff"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#ffffff"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
                     </svg>
                 </a>
             </div>
             <div id="menu-mobile" className={menu + ` bg-black absolute w-full pt-3 pb-7`}>
                 <ul className="flex flex-col justify-center w-full items-end px-8 text-lg *:hover:text-secondary *:transition *:duration-300 *:ease-in-out text-white font-medium gap-5">
-                    <li className=""><a href="/">Home</a></li>
-                    <li className=""><a href="#project">Stack</a></li>
-                    <li className=""><a href="#project">Projects</a></li>
-                    <li className=""><a href="#contact">Contact</a></li>
+                    {navLinks.map((link) => (
+                        <li key={link.href} onClick={menuToggle}><a href={link.href}>{link.label}</a></li>
+                    ))}
                 </ul>
             </div>
         </nav>

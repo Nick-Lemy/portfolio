@@ -1,30 +1,18 @@
-import React from "react"
 const InfoSquare = ({ icon, title, desc, list }) => {
-     let liList = []
-list.map(elem => {
-        liList.push(<li>{elem}</li>)
-    })
     return (
-        <div className="border p-6 border-gray-500 rounded-md max-w-sm flex flex-col justify-center gap-3">
-            <div className="flex gap-5 items-center">
-                <img className="w-10" src={icon} alt="" />
-                <h1 className="text-white font-bold text-3xl">{title}</h1>
+        <div className="border border-gray-800 p-5 rounded-md flex flex-col gap-3">
+            <div className="flex gap-3 items-center">
+                <img className="w-7" src={icon} alt="" />
+                <h3 className="text-white font-semibold text-base">{title}</h3>
             </div>
-            <p className="text-gray-400">{desc}</p>
-            <ul className="*:text-white text-lg list-disc font-medium px-10 gap-1 flex flex-col">
-                {liList}
+            <p className="text-gray-500 text-sm">{desc}</p>
+            <ul className="list-disc px-5 flex flex-col gap-1">
+                {list.map((elem, i) => (
+                    <li key={i} className="text-gray-300 text-sm">{elem}</li>
+                ))}
             </ul>
         </div>
     )
 }
-
-/*
-<li>UI/UX Design</li>
-<li>Frontend Development</li>
-<li>Banckend Development</li>
-<li>Mobile App Development</li>
-
-*/
-// I can help develop solutions that will help grow your business:
 
 export default InfoSquare

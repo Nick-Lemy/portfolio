@@ -1,8 +1,7 @@
 export const Logo = () => {
     return (
-        <h1 className="text-white text-2xl lg:text-4xl font-bold">
-            Lemy
-            <span className="text-secondary">.dev</span>
-        </h1>
+        <span className="text-white text-xl font-semibold tracking-tight">
+            Lemy<span className="text-secondary">.dev</span>
+        </span>
     )
 }
