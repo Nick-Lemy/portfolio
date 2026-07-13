@@ -17,8 +17,8 @@ export const education = [
         period: "November 2024 – Present",
         points: [
             "Intensive training in modern web engineering",
-            "Peer programming with TypeScript, React, TailwindCSS, and Nest.js",
-            "Delivered software projects for NGOs in Rwanda",
+            "Peer programming with Git, TypeScript, React, TailwindCSS, and Nest.js",
+            "Strengthened communication, public speaking, and technical collaboration skills",
         ],
     },
 ]

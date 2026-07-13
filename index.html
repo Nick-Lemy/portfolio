@@ -3,16 +3,29 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/react.svg">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>lemy.dev</title>
+  <title>Nick-Lemy Kayiranga</title>
+  <meta name="description"
+    content="Nick-Lemy Kayiranga — full-stack software engineer and open-source maintainer in Kigali, Rwanda." />
+  <script>
+    (function () {
+      var t = new URLSearchParams(location.search).get("theme") || localStorage.getItem("theme");
+      if (t !== "light" && t !== "dark") {
+        t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      }
+      document.documentElement.dataset.theme = t;
+    })();
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..500&family=Hanken+Grotesk:wght@300;400;500;600;700&family=Caveat:wght@500;600;700&display=swap"
+    rel="stylesheet">
 </head>
 
-<body class="bg-black/98">
-  <div class="relative" id="root"></div>
+<body>
+  <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
 </body>
 
