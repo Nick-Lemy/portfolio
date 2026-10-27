@@ -7,6 +7,7 @@ import { WhatIDo } from './sections/WhatIDo'
 import { Made } from './sections/Made'
 import { Hello } from './sections/Hello'
 import { Footer } from './sections/Footer'
+import { BazaChat } from './components/BazaChat'
 
 function App() {
   useReveal()
@@ -21,6 +22,7 @@ function App() {
         <Made />
         <Hello />
       </main>
+      <BazaChat/>
       <Footer />
     </>
   )
