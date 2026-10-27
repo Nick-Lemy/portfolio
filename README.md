@@ -1,5 +1,16 @@
 # React + Vite
 
+## Baza chat
+
+The site loads Baza chat through an async script in `index.html` using assistant
+`d54c8103-6f98-4e2f-9f01-62379e7f7b57`.
+
+Run `npm run dev` and open the `localhost` URL printed by Vite. Baza checks the
+website's origin: `http://localhost:5173` is currently accepted, while
+`http://127.0.0.1:5173` returns `403` with `Not available on this website`.
+If the widget is missing on another address, add that website to the assistant's
+allowed websites in Baza. The production website must also be allowed.
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
