@@ -1,7 +1,6 @@
 export const projects = [
     {
         title: "Car Sharing App",
-        accent: "var(--teal)",
         description:
             "Backend for vehicle booking and availability management with layered architecture (controllers, services, persistence) and unit + integration tests.",
         tech: ["Nest.js", "TypeScript", "PostgreSQL", "Raw SQL", "Jest"],
@@ -12,7 +11,6 @@ export const projects = [
     },
     {
         title: "Product Catalogue API",
-        accent: "var(--gold)",
         description:
             "Event-driven backend publishing domain events to Apache Kafka, keyed by product ID to preserve per-product ordering. Events emitted only after DB commit, with safe degradation when Kafka is down. Containerized and unit-tested.",
         tech: ["C#", ".NET 10", "PostgreSQL", "EF Core", "Kafka", "Docker"],
@@ -22,7 +20,6 @@ export const projects = [
     },
     {
         title: "Hollow Chat TUI",
-        accent: "var(--plum)",
         description:
             "Cross-platform terminal chat app with public and private rooms over a self-hosted TCP server. Single-file client with no runtime dependency; Dockerized server with automated Linux/macOS/Windows releases.",
         tech: ["C#", ".NET 10", "Terminal.Gui", "TCP", "Docker"],
@@ -33,7 +30,6 @@ export const projects = [
     },
     {
         title: "WhatsApp Spammer CLI",
-        accent: "var(--olive)",
         description:
             "Published npm CLI tool for automated WhatsApp messaging, driven through browser automation.",
         tech: ["TypeScript", "Puppeteer", "Chrome Remote Debugging"],

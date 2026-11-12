@@ -8,30 +8,11 @@
   <title>Nick-Lemy Kayiranga</title>
   <meta name="description"
     content="Nick-Lemy Kayiranga — full-stack software engineer and open-source maintainer in Kigali, Rwanda." />
-  <script>
-    (function () {
-      var t = new URLSearchParams(location.search).get("theme") || localStorage.getItem("theme");
-      if (t !== "light" && t !== "dark") {
-        t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-      }
-      document.documentElement.dataset.theme = t;
-    })();
-  </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..500&family=Hanken+Grotesk:wght@300;400;500;600;700&family=Caveat:wght@500;600;700&display=swap"
-    rel="stylesheet">
 </head>
 
 <body>
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
-  <script
-    src="https://baza.chat/widget.js"
-    data-assistant-id="d54c8103-6f98-4e2f-9f01-62379e7f7b57"
-    async
-  ></script>
 </body>
 
 </html>

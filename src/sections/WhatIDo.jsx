@@ -1,59 +1,54 @@
-import { SectionHead } from "../components/SectionHead"
-import { experiences } from "../data/experience"
-import { skillGroups } from "../data/skills"
+import { experiences } from '../data/experience'
+import { skillGroups } from '../data/skills'
+import { ResourceLink } from '../components/ResourceLink'
+import { Cloud, Code2, Database, GitBranch, Server, Smartphone } from 'lucide-react'
+
+const skillIcons = {
+  Frontend: Code2,
+  Backend: Server,
+  'Data & Streaming': Database,
+  'Database & Cloud': Cloud,
+  Mobile: Smartphone,
+  Workflow: GitBranch,
+}
 
 export const WhatIDo = () => (
-    <section id="do" className="wrap py-16 md:py-20 border-t border-line">
-        <SectionHead num="II" title="What I do" note="& where I've done it" />
-
-        <div className="flex flex-col gap-12 mb-16">
-            {experiences.map((exp) => (
-                <article key={exp.company} className="rv grid md:grid-cols-[180px_1fr] gap-2 md:gap-10">
-                    <div className="pt-1">
-                        <p className="hand text-lg leading-tight">{exp.period}</p>
-                        <p className="text-faint text-xs mt-1">{exp.location}</p>
-                    </div>
-                    <div>
-                        <h3 className="font-serif font-medium text-ink text-xl leading-snug">
-                            {exp.role} <span className="italic font-normal text-dim">· {exp.company}</span>
-                        </h3>
-                        <ul className="flex flex-col gap-1.5 mt-3">
-                            {exp.bullets.map((b) => (
-                                <li key={b} className="text-dim text-sm leading-relaxed flex gap-2">
-                                    <span className="shrink-0" style={{ color: "var(--rust)" }}>—</span>
-                                    <span>{b}</span>
-                                </li>
-                            ))}
-                        </ul>
-                        {exp.links?.length > 0 && (
-                            <div className="flex flex-wrap gap-4 mt-3">
-                                {exp.links.map((l) => (
-                                    <a key={l.href} href={l.href} target="_blank" rel="noopener noreferrer" className="plink text-sm">
-                                        {l.label} ↗
-                                    </a>
-                                ))}
-                            </div>
-                        )}
-                    </div>
-                </article>
-            ))}
-        </div>
-
-        <div className="rv">
-            <h3 className="font-serif font-medium text-ink text-xl mb-6">
-                The toolbox <span className="hand text-lg text-dim ml-1">— what I reach for</span>
-            </h3>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-6">
-                {skillGroups.map((g) => (
-                    <div key={g.name}>
-                        <p className="flex items-center gap-2 text-sm font-semibold text-ink mb-2">
-                            <span className="w-2 h-2 rounded-full shrink-0" style={{ background: g.color }}></span>
-                            {g.name}
-                        </p>
-                        <p className="text-dim text-sm leading-relaxed">{g.items.join(", ")}</p>
-                    </div>
-                ))}
+    <section id="work" className="content section">
+      <p className="section-kicker">Work</p>
+      <h2 className="section-title">Projects I’ve worked with</h2>
+      <div className="work-list">
+        {experiences.map((exp) => (
+          <article key={exp.company} className="work-item">
+            <div className="work-meta">{exp.period}<br />{exp.location}</div>
+            <div>
+              <h3>{exp.company} <span>· {exp.role}</span></h3>
+              {exp.bullets.map((bullet) => <p key={bullet}>{bullet}</p>)}
+              <div className="text-links">
+                {exp.links?.map((link) => <ResourceLink key={link.href} href={link.href} label={link.label} />)}
+              </div>
             </div>
-        </div>
+          </article>
+        ))}
+      </div>
     </section>
 )
+
+export const Skills = () => {
+  return (
+    <section id="skills" className="content section">
+      <p className="section-kicker">Skills</p>
+      <h2 className="section-title">What I work with</h2>
+      <div className="skills">
+        {skillGroups.map((group) => (
+          <div className="skill-group" key={group.name}>
+            <h3>{(() => {
+              const Icon = skillIcons[group.name] || Code2
+              return <Icon size={17} aria-hidden="true" />
+            })()}{group.name}</h3>
+            <p>{group.items.join(' · ')}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+  )
+}
