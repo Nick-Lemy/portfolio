@@ -98,7 +98,7 @@ a:hover { color: var(--accent); }
 ::selection { color: var(--color-charcoal-blue-950); background: var(--color-steel-azure-300); }
 .site-nav { position: sticky; top: 0; z-index: 10; border-bottom: 1px solid var(--line); background: color-mix(in srgb, var(--page) 94%, transparent); }
 .nav-inner, .content, .footer-inner { width: min(100% - 48px, 1120px); margin-inline: auto; }
-.nav-inner { min-height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.nav-inner { position: relative; min-height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
 .nav-controls { display: flex; align-items: center; justify-content: flex-end; gap: 14px; }
 .brand { font-size: 18px; font-weight: 700; letter-spacing: -.04em; }
 .nav-links { display: flex; align-items: center; gap: clamp(16px, 2.5vw, 34px); list-style: none; padding: 0; margin: 0; }
@@ -107,6 +107,7 @@ a:hover { color: var(--accent); }
 .nav-links li:last-child a { display: inline-flex; align-items: center; justify-content: center; gap: 6px; padding: 11px 22px; border-radius: 999px; background: var(--control-bg); color: var(--control-fg); font-weight: 600; }
 .theme-toggle { display: inline-flex; width: 40px; height: 40px; align-items: center; justify-content: center; flex: 0 0 auto; padding: 0; border: 1px solid var(--line); border-radius: 50%; background: var(--surface); color: var(--ink); cursor: pointer; transition: background .18s, border-color .18s, color .18s; }
 .theme-toggle:hover { border-color: var(--accent); color: var(--accent); }
+.mobile-menu-toggle { display: none; width: 40px; height: 40px; align-items: center; justify-content: center; flex: 0 0 auto; padding: 0; border: 1px solid var(--line); border-radius: 50%; background: var(--surface); color: var(--ink); cursor: pointer; }
 button:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
 .content { padding-block: 100px; }
 .hero { display: grid; grid-template-columns: minmax(0, 1fr) 300px; align-items: center; gap: clamp(50px, 10vw, 150px); padding-top: 110px; padding-bottom: 80px; }
@@ -163,25 +164,20 @@ h1 { max-width: 720px; margin-bottom: 24px; font-size: clamp(52px, 7vw, 96px); l
 .footer-links { display: flex; gap: 16px; }
 @media (max-width: 720px) {
   .nav-inner, .content, .footer-inner { width: min(100% - 36px, 1120px); }
-  .nav-inner { min-height: 64px; }
-  .nav-controls { flex: 1; }
-  .nav-links { gap: 14px; }
-  .nav-links a { font-size: 12px; }
-  .nav-links li:last-child a { padding: 9px 13px; }
+  .nav-inner { min-height: 64px; gap: 14px; }
+  .nav-controls { flex: 0 0 auto; gap: 8px; }
+  .nav-links { display: none; position: absolute; top: calc(100% + 1px); right: 0; z-index: 12; width: min(280px, calc(100vw - 36px)); flex-direction: column; align-items: stretch; gap: 4px; padding: 8px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); box-shadow: 0 14px 32px rgb(0 0 0 / .24); }
+  .nav-links.is-open { display: flex; }
+  .nav-links a { display: flex; align-items: center; justify-content: space-between; padding: 12px; border-radius: 8px; color: var(--ink); font-size: 14px; }
+  .nav-links a:hover { background: var(--page); }
+  .nav-links li:last-child a { justify-content: space-between; margin-top: 4px; padding: 12px; border-radius: 8px; }
+  .mobile-menu-toggle { display: inline-flex; }
   .content { padding-block: 68px; }
   .hero { grid-template-columns: 1fr; gap: 36px; padding-top: 72px; padding-bottom: 58px; }
   .hero-photo { display: none; }
-  .hero-main { grid-row: 2; }
   .work-item { grid-template-columns: 1fr; gap: 10px; }
   .projects, .skills { grid-template-columns: 1fr; }
 }
 @media (max-width: 460px) {
-  .nav-inner { align-items: flex-start; flex-direction: column; justify-content: center; gap: 10px; padding-block: 12px; }
-  .nav-links { flex: 1; width: auto; justify-content: space-between; gap: 8px; }
-  .nav-controls { width: 100%; justify-content: space-between; gap: 8px; }
-  .theme-toggle { width: 34px; height: 34px; }
-  .nav-links a { font-size: 11px; }
-  .nav-links li:last-child a { padding: 7px 10px; }
-  .hero-photo { grid-row: 1; }
   .footer-inner { flex-direction: column; }
 }

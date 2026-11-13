@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { profile } from '../data/profile'
-import { Mail, Moon, Sun } from 'lucide-react'
+import { Mail, Menu, Moon, Sun, X } from 'lucide-react'
 
 const links = [
   { label: 'Profile', to: '#profile' },
@@ -11,6 +11,7 @@ const links = [
 ]
 
 export const Nav = () => {
+  const [menuOpen, setMenuOpen] = useState(false)
   const [theme, setTheme] = useState(() => {
     try {
       return localStorage.getItem('theme') === 'light' ? 'light' : 'dark'
@@ -35,8 +36,20 @@ export const Nav = () => {
       <div className="nav-inner">
         <a href="#top" className="brand">{profile.name} {profile.lastName}</a>
         <div className="nav-controls">
-          <ul className="nav-links">
-            {links.map((link) => <li key={link.to}><a href={link.to}>{link.label}{link.label === 'Contact' && <Mail size={14} aria-hidden="true" />}</a></li>)}
+          <ul
+            id="primary-navigation"
+            className={`nav-links${menuOpen ? ' is-open' : ''}`}
+            onKeyDown={(event) => {
+              if (event.key === 'Escape') setMenuOpen(false)
+            }}
+          >
+            {links.map((link) => (
+              <li key={link.to}>
+                <a href={link.to} onClick={() => setMenuOpen(false)}>
+                  {link.label}{link.label === 'Contact' && <Mail size={14} aria-hidden="true" />}
+                </a>
+              </li>
+            ))}
           </ul>
           <button
             type="button"
@@ -47,6 +60,19 @@ export const Nav = () => {
             title={`Switch to ${nextTheme} mode`}
           >
             {theme === 'dark' ? <Sun size={18} aria-hidden="true" /> : <Moon size={18} aria-hidden="true" />}
+          </button>
+          <button
+            type="button"
+            className="mobile-menu-toggle"
+            onClick={() => setMenuOpen(!menuOpen)}
+            onKeyDown={(event) => {
+              if (event.key === 'Escape') setMenuOpen(false)
+            }}
+            aria-label={menuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+            aria-expanded={menuOpen}
+            aria-controls="primary-navigation"
+          >
+            {menuOpen ? <X size={20} aria-hidden="true" /> : <Menu size={20} aria-hidden="true" />}
           </button>
         </div>
       </div>
