@@ -1,11 +1,10 @@
 import { projects, openSource } from '../data/projects'
 import { ResourceLink } from '../components/ResourceLink'
-import { Building2, Code2, Package, QrCode, Terminal } from 'lucide-react'
+import { Code2, Package, QrCode, Terminal } from 'lucide-react'
 import { SiWhatsapp } from 'react-icons/si'
 
 const projectIcons = {
   Gratos: QrCode,
-  'Baumeister Website': Building2,
   'Product Catalogue API': Package,
   'Hollow Chat TUI': Terminal,
   'WhatsApp Spammer CLI': SiWhatsapp,
