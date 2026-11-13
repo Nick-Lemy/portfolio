@@ -25,6 +25,7 @@ export const projects = [
             "Published npm CLI tool for automated WhatsApp messaging, driven through browser automation.",
         tech: ["TypeScript", "Puppeteer", "Chrome Remote Debugging"],
         links: [
+            { label: "Live site", href: "https://wa-spammer.lemy.dev/" },
             { label: "GitHub", href: "https://github.com/Nick-Lemy/whatsapp_spammer" },
             { label: "Docs", href: "https://wa-spammer-docs.netlify.app/" },
         ],
