@@ -170,7 +170,7 @@ h1 { max-width: 720px; margin-bottom: 24px; font-size: clamp(52px, 7vw, 96px); l
   .nav-links li:last-child a { padding: 9px 13px; }
   .content { padding-block: 68px; }
   .hero { grid-template-columns: 1fr; gap: 36px; padding-top: 72px; padding-bottom: 58px; }
-  .hero-photo { grid-row: 1; width: min(70vw, 280px); }
+  .hero-photo { display: none; }
   .hero-main { grid-row: 2; }
   .work-item { grid-template-columns: 1fr; gap: 10px; }
   .projects, .skills { grid-template-columns: 1fr; }
