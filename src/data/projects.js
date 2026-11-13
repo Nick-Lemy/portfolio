@@ -1,21 +1,12 @@
 export const projects = [
     {
-        title: "Car Sharing App",
+        title: "Gratos",
         description:
-            "Backend for vehicle booking and availability management with layered architecture (controllers, services, persistence) and unit + integration tests.",
-        tech: ["Nest.js", "TypeScript", "PostgreSQL", "Raw SQL", "Jest"],
+            "A collection of free online tools: create and download QR codes from links, or prepare video and audio downloads from YouTube, Instagram, and TikTok using your own Yoinku API key.",
+        tech: ["React", "TypeScript", "Vite", "Tailwind CSS"],
         links: [
-            { label: "GitHub", href: "https://github.com/TheGymRwanda/c6-alu-yellow-carsharing-backend" },
-            { label: "Deployed", href: "https://carsharing-backend-production.up.railway.app/api" },
-        ],
-    },
-    {
-        title: "Product Catalogue API",
-        description:
-            "Event-driven backend publishing domain events to Apache Kafka, keyed by product ID to preserve per-product ordering. Events emitted only after DB commit, with safe degradation when Kafka is down. Containerized and unit-tested.",
-        tech: ["C#", ".NET 10", "PostgreSQL", "EF Core", "Kafka", "Docker"],
-        links: [
-            { label: "GitHub", href: "https://github.com/Nick-Lemy/product-catalogue-backend" },
+            { label: "Live site", href: "https://gratos.lemy.dev/" },
+            { label: "GitHub", href: "https://github.com/Nick-Lemy/gratos" },
         ],
     },
     {
@@ -36,6 +27,25 @@ export const projects = [
         links: [
             { label: "GitHub", href: "https://github.com/Nick-Lemy/whatsapp_spammer" },
             { label: "Docs", href: "https://wa-spammer-docs.netlify.app/" },
+        ],
+    },
+    {
+        title: "Baumeister Website",
+        description:
+            "A responsive recreation of the Baumeister agency website, built as a team project to practice modern frontend development and UI implementation.",
+        tech: ["HTML", "Tailwind CSS"],
+        links: [
+            { label: "Live site", href: "https://baumeister-main-group5.netlify.app/" },
+            { label: "GitHub", href: "https://github.com/Baumeister-CO/Baumeister-v2" },
+        ],
+    },
+    {
+        title: "Product Catalogue API",
+        description:
+            "Event-driven backend publishing domain events to Apache Kafka, keyed by product ID to preserve per-product ordering. Events emitted only after DB commit, with safe degradation when Kafka is down. Containerized and unit-tested.",
+        tech: ["C#", ".NET 10", "PostgreSQL", "EF Core", "Kafka", "Docker"],
+        links: [
+            { label: "GitHub", href: "https://github.com/Nick-Lemy/product-catalogue-backend" },
         ],
     },
 ]
