@@ -24,7 +24,7 @@ export const experiences = [
             "Developed client websites including Merap Ltd using TypeScript, Next.js, and TailwindCSS",
         ],
         links: [
-            { label: "wiyocom.rw", href: "https://wiyocom.rw/" },
+            { label: "WiyoCom", href: "https://wiyo-com.vercel.app/" },
             { label: "merap", href: "https://merap.netlify.app/" },
         ],
     },
