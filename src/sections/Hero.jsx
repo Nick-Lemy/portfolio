@@ -17,7 +17,7 @@ export const Hero = () => (
           <a href={`mailto:${profile.email}`}>Get in touch <Mail size={16} aria-hidden="true" /></a>
         </div>
       </div>
-      <img className="hero-photo" src="/me.jpeg" alt={`Portrait of ${profile.fullName}`} />
+      <img className="hero-photo" src="/profile-photo.jpg" alt={`Portrait of ${profile.fullName}`} />
     </header>
     <div className="content worked-with" aria-label="Organizations and teams">
       <strong>Worked with</strong>
