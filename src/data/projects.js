@@ -2,7 +2,7 @@ export const projects = [
     {
         title: "Gratos",
         description:
-            "Free tools for creating QR codes and preparing media downloads with your own Yoinku API key.",
+            "QR codes and media downloads powered by Yoinku.",
         tech: ["React", "TypeScript", "Vite", "Tailwind CSS"],
         links: [
             { label: "Live site", href: "https://gratos.lemy.dev/" },
@@ -12,7 +12,7 @@ export const projects = [
     {
         title: "Hollow Chat TUI",
         description:
-            "Cross-platform terminal chat with public and private rooms over a self-hosted TCP server.",
+            "Cross-platform terminal chat with public and private rooms over TCP.",
         tech: ["C#", ".NET 10", "Terminal.Gui", "TCP", "Docker"],
         links: [
             { label: "GitHub", href: "https://github.com/Nick-Lemy/hollow-chat-tui" },
@@ -22,7 +22,7 @@ export const projects = [
     {
         title: "WhatsApp Spammer CLI",
         description:
-            "CLI tool for automating WhatsApp messages with browser automation.",
+            "Automates WhatsApp messaging through browser controls.",
         tech: ["TypeScript", "Puppeteer", "Chrome Remote Debugging"],
         links: [
             { label: "Live site", href: "https://wa-spammer.lemy.dev/" },
@@ -33,7 +33,7 @@ export const projects = [
     {
         title: "Product Catalogue API",
         description:
-            "Product API that publishes Kafka events after database commits, preserving event order by product.",
+            "Product and asset APIs with ordered Kafka events and a background consumer.",
         tech: ["C#", ".NET 10", "PostgreSQL", "EF Core", "Kafka", "Docker"],
         links: [
             { label: "GitHub", href: "https://github.com/Nick-Lemy/product-catalogue-backend" },

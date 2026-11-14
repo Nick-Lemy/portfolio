@@ -8,8 +8,7 @@ export const Hello = () => (
     <p className="section-kicker">Contact</p>
     <h2 className="section-title">Let’s work together.</h2>
     <p className="contact-copy">
-      I’m open to software engineering opportunities, freelance work, and collaborations. Email is the
-      best way to reach me.
+      Open to software engineering roles and collaborations.
     </p>
     <a className="contact-email" href={`mailto:${profile.email}`}><Mail size={19} aria-hidden="true" />{profile.email}<ArrowUpRight size={17} aria-hidden="true" /></a>
     <div className="text-links">

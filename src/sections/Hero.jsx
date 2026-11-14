@@ -9,8 +9,7 @@ export const Hero = () => (
         <p className="eyebrow">Software engineer · Kigali, Rwanda</p>
         <h1>Hi, I’m <span className="hero-name">{profile.name} {profile.lastName}.</span></h1>
         <p className="hero-copy">
-          Building full-stack products for startups and agencies, contributing to open source, and
-          helping more developers get involved in tech communities.
+          Full-stack developer building web, mobile, and backend products.
         </p>
         <div className="hero-links">
           <a href="#content">View my work <ArrowRight size={16} aria-hidden="true" /></a>
@@ -22,8 +21,8 @@ export const Hero = () => (
     <div className="content worked-with" aria-label="Organizations and teams">
       <strong>Worked with</strong>
       <ResourceLink href="https://www.oskigali.org/" label="Open Source Kigali" />
-      <ResourceLink href="https://wiyocom.rw/" label="WiyoCom" />
-      <ResourceLink href="https://ottri-frontend-3a6e09c2024b.herokuapp.com/" label="Safi Core · Ottri" />
+      <ResourceLink href="https://wiyo-com.vercel.app/" label="WiyoCom" />
+      <ResourceLink href="https://ottri-frontend-3a6e09c2024b.herokuapp.com/" label="Ottri" />
     </div>
   </>
 )

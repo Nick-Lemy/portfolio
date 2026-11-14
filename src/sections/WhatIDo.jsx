@@ -15,7 +15,7 @@ const skillIcons = {
 export const WhatIDo = () => (
     <section id="work" className="content section">
       <p className="section-kicker">Work</p>
-      <h2 className="section-title">Projects I’ve worked with</h2>
+      <h2 className="section-title">Experience</h2>
       <div className="work-list">
         {experiences.map((exp) => (
           <article key={exp.company} className="work-item">
